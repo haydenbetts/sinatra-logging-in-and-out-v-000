@@ -15,7 +15,7 @@ class ApplicationController < Sinatra::Base
       session[:id] = @user.id
       redirect '/account'
     else
-      render "Incorrect password!"
+      "Incorrect password!"
     end
   end
 
