@@ -20,7 +20,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/account' do
-    if session[:id]
+    if session[:user_id]
       @user = User.find(session[:id])
       erb :account
     else
